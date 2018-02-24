@@ -1,6 +1,6 @@
-require "rails_helper"
+# require "rails_helper"
 
-describe User do
+describe 'User' do
 
   subject { 2 + 2 }
 
