@@ -18,8 +18,8 @@ default: &default
   adapter: postgresql
   encoding: unicode
   database: ChristianBook
-  user: rc
-  password: 123
+  user: chr_book
+  password: 1q2w
   host: localhost
   pool: 5
   # For details on connection pooling, see Rails configuration guide
