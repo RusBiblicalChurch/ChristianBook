@@ -1,11 +1,7 @@
-# require "rails_helper"
+require "rails_helper"
 
-describe 'User' do
 
-  subject { 2 + 2 }
-
-  it 'easy' do
-    is_expected.to eq 4
-  end
-
+RSpec.describe User, type: :model do
+  it { should validate_presence_of(:name) }
+  it { should validate_presence_of(:surname) }
 end
