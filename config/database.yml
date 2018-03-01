@@ -2,6 +2,7 @@ default: &default
   adapter: postgresql
   encoding: unicode
   host: localhost
+  password: <%= ENV['CHRISTIANBOOK_DATABASE_PASSWORD'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
@@ -19,4 +20,3 @@ production:
   <<: *default
   database: ChristianBook_production
   username: ChristianBook
-  password: <%= ENV['CHRISTIANBOOK_DATABASE_PASSWORD'] %>
