@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180226172057) do
+ActiveRecord::Schema.define(version: 20180301143958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "books", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.boolean "recommended_rbc", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -33,6 +41,13 @@ ActiveRecord::Schema.define(version: 20180226172057) do
     t.string "last_sign_in_ip"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "users_books", id: false, force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "book_id"
+    t.index ["book_id"], name: "index_users_books_on_book_id"
+    t.index ["user_id"], name: "index_users_books_on_user_id"
   end
 
 end
