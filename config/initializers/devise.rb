@@ -8,9 +8,10 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # rubocop:disable Metrics/LineLength
-  # config.secret_key = '98eebe2795b8bfff42957bba067aa7ab6266dd63a759ec9c371f4de375b254553ad48df528934be2107ceef7d3a9f3d3a64a793cc354ad774fe5e132bc37c01a'
-  # rubocop:enable Metrics/LineLength
+  # config.secret_key = '98eebe2795b8bfff42957bba067aa7ab6266dd63a759ec'\
+  #                     '9c371f4de375b254553ad48df528934be2107ceef7d3a9'\
+  #                      'f3d3a64a793cc354ad774fe5e132bc37c01a'
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
@@ -111,9 +112,9 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # rubocop:disable Metrics/LineLength
-  # config.pepper = '41f67f9949c74e2fb3682436ead866e37b186a6899b39e441eaa8b023c50e01152f40182278145f024d41ddfe74fea3a37f0a2fe3d7ec34ddd0653bbd1aa911d'
-  # rubocop:enable Metrics/LineLength
+  # config.pepper = '41f67f9949c74e2fb3682436ead866e37b186a6899b39e441' \
+  #                 'eaa8b023c50e01152f40182278145f024d41ddfe74fea3'\
+  #                 'a37f0a2fe3d7ec34ddd0653bbd1aa911d'
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
 
