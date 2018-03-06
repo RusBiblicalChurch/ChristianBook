@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301143958) do
+ActiveRecord::Schema.define(version: 20180306155631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,9 +18,19 @@ ActiveRecord::Schema.define(version: 20180301143958) do
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.boolean "recommended_rbc", default: false
+    t.boolean "recommended_church", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "ordered_books", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "book_id"
+    t.boolean "confirmed", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_ordered_books_on_book_id"
+    t.index ["user_id"], name: "index_ordered_books_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,11 +53,6 @@ ActiveRecord::Schema.define(version: 20180301143958) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "users_books", id: false, force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "book_id"
-    t.index ["book_id"], name: "index_users_books_on_book_id"
-    t.index ["user_id"], name: "index_users_books_on_user_id"
-  end
-
+  add_foreign_key "ordered_books", "books"
+  add_foreign_key "ordered_books", "users"
 end
