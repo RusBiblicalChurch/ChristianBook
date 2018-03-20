@@ -1,11 +1,10 @@
 class BooksController < ApplicationController
 
-	def index
-		@books = Book.all
-		respond_to do |format|
-			format.json {render json: @books}
-	end
+  def index
+    @books = Book.all
+    respond_to do |format|
+      format.json { render json: @books }
+    end
+  end
 
-	private
-	
 end
