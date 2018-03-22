@@ -8,6 +8,7 @@ AllCops:
     - 'test/**/*'
     - 'db/migrate/**/*'
     - 'db/schema.rb'
+    - 'app/admin/**'
   TargetRubyVersion: 2.5
 
 Metrics/LineLength:
