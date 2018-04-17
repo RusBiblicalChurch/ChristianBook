@@ -1,8 +1,8 @@
 <template>
   <div class="book">
     <div class="book_info">
-      <p>{{book.id}}</p>
       <h3>{{book.title}}</h3>
+      <p>{{book.price}} руб</p>
       <p>{{book.description}}</p>
     </div>  
   </div>
@@ -21,7 +21,7 @@
   .book_info{
     width: 600px;
     text-align: center;
-    background-color: blue;
+    background-color: antiquewhite;
   }
 </style>
  
