@@ -6,17 +6,14 @@
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
 import Vue from 'vue'
-import IndexBooks from '../index_books.vue'
+import BooksList from './vue/books_list.vue'
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let el = document.getElementById('books_list');
-  let indexBooks = new Vue({
-    render: h => h(IndexBooks),
+  new Vue({
+    render: h => h(BooksList)
   }).$mount(el)
-
-  console.log(indexBooks);
-
-  console.log(json);
 })
 
 

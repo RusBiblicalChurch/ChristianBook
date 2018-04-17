@@ -8,4 +8,3 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import './application_vue';
-console.log('Hello World from Webpacker');
