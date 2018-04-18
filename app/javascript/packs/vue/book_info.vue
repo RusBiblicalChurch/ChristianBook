@@ -1,19 +1,20 @@
 <template>
   <div class="book">
     <div class="book_info">
-      <h3>{{book.title}}</h3>
+      <div class="book_title">
+        {{book.title}}
+      </div>
       <p>{{book.price}} руб</p>
       <p>{{book.description}}</p>
     </div>  
   </div>
-<!--       <div class="book-id">{{book.id}}</div>
-      <div class="book-title">{{book.title}}</div>
-      <div class="book-description">{{book.description}}</div> -->
 </template>
 
 <script >
   export default {
-    props: ["book"],
+    props: {
+      book: Object
+    }
   }
 </script>
 
@@ -23,5 +24,8 @@
     text-align: center;
     background-color: antiquewhite;
   }
+  .book_title{
+    font-family: "PT Sans", "Arial", serif;
+    font-size: 25px;
+  }
 </style>
- 
