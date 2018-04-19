@@ -6,15 +6,48 @@
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
 import Vue from 'vue'
-import BooksList from './vue/books_list.vue'
+import BooksList from '.vue/books_list.vue'
 
+
+/* document.addEventListener('DOMContentLoaded', () => {
+  new Vue({
+    el: '#books_list',
+    render: h => h(BooksList)
+  })
+}) */
 
 document.addEventListener('DOMContentLoaded', () => {
-  let el = document.getElementById('books_list');
-  new Vue({
+  const app = new Vue({
+    el: '#books_list',
+    data(){
+    },/* 
+    template: '<books-list :books="books"></books-list>', */
     render: h => h(BooksList)
-  }).$mount(el)
+  })
 })
+
+
+
+/* new Vue({
+  el: "#books_list",
+  template: `<BooksList :books='books'/>`,
+  components: { BooksList },
+  data: function () {
+    let el = document.getElementById('books_list');
+    let books_json = JSON.parse(el.getAttribute('data'));
+    return{
+      books: books_json
+    }
+  },
+  data: { books: books_list() } 
+}); */
+
+/* let el = document.getElementById('books_list');
+let books_json = JSON.parse(el.getAttribute('data'));
+return{
+  books: books_json
+} */
+
 
 
 // The above code uses Vue without the compiler, which means you cannot
@@ -29,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //   {{message}}
 //   <app></app>
 // </div>
+
 
 
 // import Vue from 'vue/dist/vue.esm'
