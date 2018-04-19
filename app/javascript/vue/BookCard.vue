@@ -1,12 +1,12 @@
 <template>
   <div class="book">
-    <div class="book_info">
-      <div class="book_title">
+    <div class="book-info">
+      <div class="book-title">
         {{book.title}}
       </div>
       <p>{{book.price}} руб</p>
       <p>{{book.description}}</p>
-    </div>  
+    </div>
   </div>
 </template>
 
@@ -19,12 +19,13 @@
 </script>
 
 <style scoped>
-  .book_info{
+  .book-info{
     width: 600px;
     text-align: center;
     background-color: antiquewhite;
   }
-  .book_title{
+
+  .book-title{
     font-family: "PT Sans", "Arial", serif;
     font-size: 25px;
   }
