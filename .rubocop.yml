@@ -1,13 +1,24 @@
+inherit_from: .rubocop_todo.yml
+
 AllCops:
   Exclude:
     - 'bin/*'
     - 'node_modules/**/*'
     - 'spec/**/*'
     - 'test/**/*'
-  TargetRubyVersion: 2.4
+    - 'db/migrate/**/*'
+    - 'db/schema.rb'
+    - 'app/admin/**'
+  TargetRubyVersion: 2.5
 
 Metrics/LineLength:
   Max: 120
 
 FrozenStringLiteralComment:
+  Enabled: false
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines_except_namespace
+Style/ClassAndModuleChildren:
+  EnforcedStyle: nested
+Style/Documentation:
   Enabled: false
