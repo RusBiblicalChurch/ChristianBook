@@ -1,20 +1,26 @@
 <template>
   <div class="shop">
-    <book-shelf></book-shelf>
+    <book-shelf :books="books"/>
   </div>
 </template>
 
 <script>
-  import bookData from './books-data'
+  import booksData from './books-data'
   import BookShelf from './BookShelf'
 
   export default {
-    data: () => ({}),
+    data() {
+      return {
+        books: []
+      }
+    },
     components: {
       BookShelf
     },
     created() {
-      this.books = bookData.books
+      booksData.then((response) => {
+        this.books = response.data
+      })
     }
   }
 </script>
