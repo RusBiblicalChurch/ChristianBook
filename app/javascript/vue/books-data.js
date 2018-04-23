@@ -1,3 +1,5 @@
 import axios from 'axios'
 
-export default axios('/api/books')
+export default new Promise((resolve)  => {
+  axios('/api/books').then((response) => resolve(response.data))
+})

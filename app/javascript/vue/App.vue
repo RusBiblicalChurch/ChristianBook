@@ -18,8 +18,8 @@
       BookShelf
     },
     created() {
-      booksData.then((response) => {
-        this.books = response.data
+      booksData.then((books) => {
+        this.books = books
       })
     }
   }
