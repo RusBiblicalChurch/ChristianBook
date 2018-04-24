@@ -1,10 +1,5 @@
-import Axios from 'axios'
+import axios from 'axios'
 
-export default function data () {
-  let el = document.getElementById('books_list');
-  let books = JSON.parse(el.getAttribute('data'));
-
-  return {
-    books
-  }
-}
+export default new Promise((resolve) => {
+  axios('/api/books').then((response) => resolve(response.data) )
+})
