@@ -9,11 +9,10 @@
   import BookShelf from './BookShelf'
 
   export default {
-    data: () => ({}),
     components: {
       BookShelf
     },
-    created() {
+    created () {
       this.books = bookData.books
     }
   }

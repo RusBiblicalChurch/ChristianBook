@@ -1,4 +1,5 @@
 {
   "extends": ["standard", "vue"],
-  "parser": "babel-eslint"
+  "parser": "babel-eslint",
+  "plugins": ["html"]
 }
