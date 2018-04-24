@@ -1,6 +1,11 @@
+version: 2
 plugins:
   rubocop:
     enabled: true
   eslint:
     enabled: true
-    channel: "eslint-4"
+    config:
+      config: ./.eslintrc.json
+      extensions:
+        - .vue
+        - .js
