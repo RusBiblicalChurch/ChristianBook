@@ -18,9 +18,10 @@
       BookShelf
     },
     created() {
-      booksData.then((books) => {
-        this.books = books
-      })
+      booksData
+        .then((books) => {
+          this.books = books})
+        .catch((message) => alert(message))
     }
   }
 </script>
