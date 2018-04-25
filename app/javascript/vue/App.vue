@@ -9,7 +9,7 @@
   import BookShelf from './BookShelf'
 
   export default {
-    data () {
+    data() {
       return {
         books: []
       }

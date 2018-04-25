@@ -6,7 +6,6 @@
 
 <script>
   import BookCard from './BookCard'
-  import dataFunc from './books-data'
 
   export default {
     props: {
