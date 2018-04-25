@@ -9,7 +9,7 @@
   import BookShelf from './BookShelf'
 
   export default {
-    data() {
+    data () {
       return {
         books: []
       }
@@ -17,11 +17,10 @@
     components: {
       BookShelf
     },
-    created() {
+    created () {
       booksData
-        .then((books) => {
-          this.books = books})
-        .catch((message) => alert(message))
+        .then((books) => { this.books = books })
+        .catch((message) => window.alert(message))
     }
   }
 </script>
