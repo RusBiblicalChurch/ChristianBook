@@ -6,10 +6,11 @@
 
 <script>
   import BookCard from './BookCard'
-  import dataFunc from './books-data'
 
   export default {
-    data: dataFunc,
+    props: {
+      books: Array
+    },
     components: {
       BookCard: BookCard
     }

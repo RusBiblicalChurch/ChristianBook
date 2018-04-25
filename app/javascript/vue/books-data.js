@@ -1,9 +1,7 @@
-export default function data () {
-  const el = document.getElementById('books_list')
-  const books = JSON.parse(el.getAttribute('data'))
+import axios from 'axios'
 
-  console.log(books)
-  return {
-    books
-  }
-}
+export default new Promise((resolve, reject) => {
+  axios('/api/books')
+    .then((response) => resolve(response.data))
+    .catch((e) => reject(e))
+})
