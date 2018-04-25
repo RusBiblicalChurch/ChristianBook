@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/f9799120a6e692a13f95/maintainability)](https://codeclimate.com/github/RusBiblicalChurch/ChristianBook/maintainability) [![Build Status](https://travis-ci.org/RusBiblicalChurch/ChristianBook.svg?branch=master)](https://travis-ci.org/RusBiblicalChurch/ChristianBook)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
