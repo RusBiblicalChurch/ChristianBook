@@ -24,3 +24,5 @@ yarn-debug.log*
 .yarn-integrity
 /config/database.yml
 .vscode/launch.json
+
+/public/system/images
