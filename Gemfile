@@ -15,6 +15,7 @@ gem 'rubocop', '~> 0.52.1', require: false
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+gem 'mini_magick'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -36,6 +37,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development do
