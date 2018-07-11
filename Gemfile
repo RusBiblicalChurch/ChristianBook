@@ -9,7 +9,7 @@ gem 'activeadmin'
 gem 'bootsnap', require: false
 gem 'devise', '~> 4.4.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.0'
+gem 'rails', '~> 5.2.0'
 gem 'rubocop', '~> 0.52.1', require: false
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'

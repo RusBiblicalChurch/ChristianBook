@@ -15,6 +15,18 @@ ActiveAdmin.register Book do
     end
     f.actions
   end
+  
+  show do
+    attributes_table do
+      row :title
+      row :picture do |book|
+        image_tag url_for(book.picture)
+      end
+      row :price
+      row :description
+      row :recommended_church
+      end
+  end
 
   index do
     selectable_column
@@ -25,14 +37,16 @@ ActiveAdmin.register Book do
     column :recommended_church
     # column :boock.picture 
     # column "Cover" do |book|
-    #   @book.picture ? image_tag(book.picture) : 'No cover'
+    #   @book.picture ? image_tag(url_for(book.picture)) : 'No cover'
     # end  
     column :created_at
-    actions 
+
+    actions
   end
 
   filter :title
   filter :description
   filter :recommended_church
   filter :created_at
+
 end

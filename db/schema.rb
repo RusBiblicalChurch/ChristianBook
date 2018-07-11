@@ -59,17 +59,6 @@ ActiveRecord::Schema.define(version: 2018_05_30_123347) do
     t.integer "price"
   end
 
-  create_table "images", force: :cascade do |t|
-    t.string "cover_file_name"
-    t.string "cover_content_type"
-    t.integer "cover_file_size"
-    t.datetime "cover_updated_at"
-    t.bigint "book_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["book_id"], name: "index_images_on_book_id"
-  end
-
   create_table "ordered_books", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "book_id"

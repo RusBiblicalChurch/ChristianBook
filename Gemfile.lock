@@ -311,7 +311,7 @@ DEPENDENCIES
   mini_magick
   pg (~> 0.18)
   puma (~> 3.7)
-  rails (= 5.2.0)
+  rails (~> 5.2.0)
   rails-controller-testing
   rspec-rails (~> 3.7)
   rubocop (~> 0.52.1)

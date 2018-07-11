@@ -7,7 +7,9 @@ default: &default
 
 development:
   <<: *default
-  database: ChristianBook_development
+  database: db_dev
+  username: dany
+  password: 1q2w3e
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

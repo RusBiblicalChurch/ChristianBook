@@ -6,6 +6,7 @@
       </div>
       <p>{{book.price}} руб</p>
       <p>{{book.description}}</p>
+      <!-- <img>{{url_for(book.picture)}} </img> -->
     </div>
   </div>
 </template>
