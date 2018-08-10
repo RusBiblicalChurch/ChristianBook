@@ -19,13 +19,14 @@ ActiveAdmin.register Book do
   show do
     attributes_table do
       row :title
+      #ToDo в случае отсутствия картинки цеплять заглушку(нужно ли это в админке)?
       row :picture do |book|
-        image_tag url_for(book.picture)
+        image_tag url_for(book.picture) if book.picture.attached?
       end
       row :price
       row :description
       row :recommended_church
-      end
+    end
   end
 
   index do
@@ -34,11 +35,7 @@ ActiveAdmin.register Book do
     column :title
     column :price
     column :description
-    column :recommended_church
-    # column :boock.picture 
-    # column "Cover" do |book|
-    #   @book.picture ? image_tag(url_for(book.picture)) : 'No cover'
-    # end  
+    column :recommended_church 
     column :created_at
 
     actions
