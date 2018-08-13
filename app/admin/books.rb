@@ -19,7 +19,7 @@ ActiveAdmin.register Book do
   show do
     attributes_table do
       row :title
-      #ToDo в случае отсутствия картинки цеплять заглушку(нужно ли это в админке)?
+      # TODO в случае отсутствия картинки цеплять заглушку(нужно ли это в админке)?
       row :picture do |book|
         image_tag url_for(book.picture) if book.picture.attached?
       end
