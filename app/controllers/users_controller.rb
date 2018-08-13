@@ -6,5 +6,5 @@ class UsersController < ApplicationController
       format.html { render json: @users }
     end
   end
-  
+
 end
