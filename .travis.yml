@@ -1,6 +1,7 @@
 language: ruby
 before_install:
   - gem install bundler
+  - cp config/database.example.yml config/database.yml
 bundler_args: --without production
 cache: bundler
 rvm:
