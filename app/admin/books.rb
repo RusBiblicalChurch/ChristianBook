@@ -35,7 +35,7 @@ ActiveAdmin.register Book do
     column :title
     column :price
     column :description
-    column :recommended_church 
+    column :recommended_church
     column :created_at
 
     actions
