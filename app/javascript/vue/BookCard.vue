@@ -6,6 +6,9 @@
       </div>
       <p>{{book.price}} руб</p>
       <p>{{book.description}}</p>
+      <div class="picture">
+        <img  :src="book.picture_url" width="200" height="250"/>
+      </div>
     </div>
   </div>
 </template>
@@ -22,11 +25,11 @@
   .book-info{
     width: 600px;
     text-align: center;
-    background-color: antiquewhite;
+    background-color: rgb(255, 214, 160);
   }
 
   .book-title{
     font-family: "PT Sans", "Arial", serif;
-    font-size: 25px;
+    font-size: 50px;
   }
 </style>

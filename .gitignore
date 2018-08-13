@@ -26,3 +26,6 @@ yarn-debug.log*
 .vscode/launch.json
 
 /public/system/images
+/storage
+
+/config/database.yml

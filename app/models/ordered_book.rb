@@ -1,6 +1,6 @@
 class OrderedBook < ApplicationRecord
 
-  belongs_to :assembly
-  belongs_to :part
+  belongs_to :book, dependent: :destroy
+  belongs_to :user, dependent: :destroy
 
 end

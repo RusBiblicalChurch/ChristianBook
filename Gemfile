@@ -8,8 +8,9 @@ end
 gem 'activeadmin'
 gem 'bootsnap', require: false
 gem 'devise', '~> 4.4.1'
+gem 'mini_magick'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.0'
+gem 'rails', '~> 5.2.0'
 gem 'rubocop', '~> 0.52.1', require: false
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
@@ -28,9 +29,9 @@ gem 'webpacker'
 gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 3.7'
