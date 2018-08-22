@@ -2,9 +2,9 @@
   <div class="book">
     <div class="book-info">
       <div class="book-title">
-        {{book.title}}
+      <p><router-link to="/info">{{book.title}}</router-link></p>
       </div>
-      <p>{{book.price}} руб</p>
+      <p>{{book.price}} руб </p>
       <p>{{book.description}}</p>
       <div class="picture">
         <img  :src="book.picture_url" width="200" height="250"/>

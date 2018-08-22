@@ -1,5 +1,6 @@
 <template>
   <div>
+    <router-view></router-view>
     <book-card v-for="book in books" :key="book.id" :book="book"/>
   </div>
 </template>

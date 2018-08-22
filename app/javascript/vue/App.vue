@@ -1,5 +1,6 @@
 <template>
   <div class="shop">
+    <router-view></router-view>
     <book-shelf :books="books"/>
   </div>
 </template>
