@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   namespace :api do
     resources :books
   end
+
+  get '/info' => 'books#index'
 end

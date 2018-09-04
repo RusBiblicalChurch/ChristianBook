@@ -5,7 +5,7 @@ import {router} from './vue/router'
 document.addEventListener('DOMContentLoaded', () => {
   return new Vue({
     router,
-    el: '#books_list',
+    el: '#books_app',
     render: h => h(App)
   })
 })

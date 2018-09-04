@@ -1,5 +1,6 @@
 import BookShelf from './BookShelf.vue'
 import BookPage  from './BookPage.vue'
+import App from './App.vue'
 
 export const routes = [
     {
@@ -7,7 +8,7 @@ export const routes = [
         component: BookShelf
     },
     {
-        path: '/info/:id',
+        path: '/info',
         component: BookPage
     },
     {
