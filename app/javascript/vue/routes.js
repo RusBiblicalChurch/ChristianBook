@@ -8,7 +8,7 @@ export const routes = [
         component: BookShelf
     },
     {
-        path: '/info',
+        path: '/book/:id',
         component: BookPage
     },
     {

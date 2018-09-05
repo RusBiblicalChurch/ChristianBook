@@ -9,5 +9,5 @@ Rails.application.routes.draw do
     resources :books
   end
 
-  get '/info' => 'books#index'
+  get '/book' => 'books#index'
 end

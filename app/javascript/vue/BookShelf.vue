@@ -6,6 +6,7 @@
 
 <script>
   import BookCard from './BookCard'
+  import booksData from './books-data'
 
   export default {
     props: {  
@@ -13,6 +14,11 @@
     },
     components: {
       BookCard: BookCard
+    },
+    created () {
+      booksData
+        .then((books) => { this.books = books })
+        .catch((message) => window.alert(message))
     }
   }
 </script>
