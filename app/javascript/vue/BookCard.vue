@@ -2,7 +2,7 @@
   <div class="book">
     <div class="book-info">
       <div class="book-title">
-        <p>{{book.title}}</p>
+        <router-link :to="{ name: 'book', params: { id: book.id }  }">{{book.title}}</router-link>
       </div>
       <p>{{book.price}} руб </p>
       <p>{{book.description}}</p>
