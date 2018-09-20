@@ -1,18 +1,18 @@
 import BookShelf from './BookShelf.vue'
-import BookPage  from './BookPage.vue'
+import BookPage from './BookPage.vue'
 
 export const routes = [
   {
     path: '/',
-      component: BookShelf
+    component: BookShelf
   },
   {
     path: '/book/:id',
-      name: 'book',
-      component: BookPage
+    name: 'book',
+    component: BookPage
   },
   {
     path: '*',
-      component: BookShelf
+    component: BookShelf
   }
 ]

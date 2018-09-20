@@ -12,7 +12,7 @@
   import booksData from './books-data'
 
   export default {
-    data() { 
+    data (){ 
       return {
         books: [],
         book: null
@@ -27,8 +27,8 @@
           this.book = _.find(this.books, { id: bookId })
         })
         .catch((message) => window.alert(message))
-      }
     }
+  }
 
 </script>
 
