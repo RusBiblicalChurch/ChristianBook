@@ -1,8 +1,8 @@
 <template>
-  <ul id="v-for-object" class="demo">
-  <li v-for="value in book">
-    {{ value.id }}
-  </li>
+  <ul>
+  	<li v-for="book in book" :key="book.id">
+  	  {{ value.id }}
+  	</li>
 </ul>
 </template>
 
@@ -12,7 +12,7 @@
   import booksData from './books-data'
 
   export default {
-    data (){ 
+    data () {
       return {
         books: [],
         book: null

@@ -9,7 +9,7 @@
   import booksData from './books-data'
 
   export default {
-    props:{  
+    props: {
       books: Array
     },
     components: {
