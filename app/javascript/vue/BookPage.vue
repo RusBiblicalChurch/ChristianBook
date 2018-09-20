@@ -12,7 +12,7 @@
   import booksData from './books-data'
 
   export default {
-    data () { 
+    data() { 
       return {
         books: [],
         book: null
@@ -20,7 +20,7 @@
     },
     created () {
       var bookId = parseInt(this.$route.params.id)
-      
+
       booksData
         .then((books) => {
           this.books = books
