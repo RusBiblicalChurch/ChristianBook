@@ -15,10 +15,10 @@
 
 <script>
   export default {
-		props: {
+    props: {
       book: Object
-		}
-	}
+    }
+  }
 </script>
 
 <style scoped>
