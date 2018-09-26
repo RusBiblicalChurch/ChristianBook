@@ -1,7 +1,7 @@
 import BookShelf from './BookShelf.vue'
 import BookPage from './BookPage.vue'
 
-export const routes = [
+export default routes = [
   {
     path: '/',
     component: BookShelf
