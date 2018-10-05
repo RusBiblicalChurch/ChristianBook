@@ -1,7 +1,7 @@
 <template>
   <ul>
   	<li v-for="book in book" :key="book.id">
-  	  {{ value.id }}
+  	  {{ book }}
   	</li>
 </ul>
 </template>
@@ -12,20 +12,16 @@
   import booksData from './books-data'
 
   export default {
-    data () {
+    data() {
       return {
-        books: [],
         book: null
       }
     },
     created () {
       var bookId = parseInt(this.$route.params.id)
 
-      booksData
-        .then((books) => {
-          this.books = books
-          this.book = _.find(this.books, { id: bookId })
-        })
+      booksData.getById(bookId)
+        .then((book) => { this.book = book })
         .catch((message) => window.alert(message))
     }
   }
