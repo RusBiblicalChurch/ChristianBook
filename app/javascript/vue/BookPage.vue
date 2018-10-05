@@ -8,11 +8,10 @@
 
 
 <script>
-  import _ from 'lodash'
   import booksData from './books-data'
 
   export default {
-    data() {
+    data () {
       return {
         book: null
       }

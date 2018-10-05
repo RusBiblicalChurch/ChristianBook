@@ -1,7 +1,7 @@
 import axios from 'axios'
 import _ from 'lodash'
 
-function getAll() {
+function getAll () {
   return new Promise((resolve, reject) => {
     axios('/api/books')
       .then((response) => resolve(response.data))
@@ -9,7 +9,7 @@ function getAll() {
   })
 }
 
-function getById(id) {
+function getById (id) {
   return new Promise((resolve, reject) => {
     getAll()
       .then((books) => {
