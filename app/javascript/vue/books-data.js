@@ -13,11 +13,12 @@ function getById (id) {
   return new Promise((resolve, reject) => {
     getAll()
       .then((books) => {
+        let error = "Can't find book with ID: "
         const book = _.find(books, { id: id })
         if (book) {
           resolve(book)
         } else {
-          reject(`Can't find book with ID: ${id}`)
+          reject(error + id)
         }
       })
       .catch((e) => reject(e))
