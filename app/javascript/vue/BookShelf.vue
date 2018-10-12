@@ -1,6 +1,6 @@
 <template>
   <div>
-    <book-card v-for="book in booksLocal" :key="book.id" :book="book"/>
+    <book-card v-for="book in books" :key="book.id" :book="book"/>
   </div>
 </template>
 
@@ -11,7 +11,7 @@
   export default {
     data () {
       return {
-        booksLocal: this.books
+        books: this.books
       }
     },
     components: {
@@ -19,7 +19,7 @@
     },
     created () {
       booksData.getAll()
-        .then((books) => { this.booksLocal = books })
+        .then((books) => { this.books = books })
         .catch((message) => window.alert(message))
     }
   }

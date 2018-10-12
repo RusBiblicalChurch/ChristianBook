@@ -23,5 +23,4 @@
         .catch((message) => window.alert(message))
     }
   }
-
 </script>
