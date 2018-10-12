@@ -17,7 +17,7 @@ function getById (id) {
         if (book) {
           resolve(book)
         } else {
-          reject(new Error('Can`t find book with ID'))
+          reject(new Error(`'Can't find book with ID ${id}'`))
         }
       })
       .catch((e) => reject(e))

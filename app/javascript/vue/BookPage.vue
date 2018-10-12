@@ -1,11 +1,10 @@
 <template>
   <ul>
-  	<li v-for="book in book" :key="book.id">
-  	  {{ book }}
-  	</li>
+    <li v-for="book in book" :key="book.id">
+      {{ book }}
+    </li>
 </ul>
 </template>
-
 
 <script>
   import booksData from './books-data'
@@ -26,6 +25,3 @@
   }
 
 </script>
-
-<style scoped>
-</style>
