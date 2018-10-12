@@ -3,7 +3,7 @@
     <li v-for="book in book" :key="book.id">
       {{ book }}
     </li>
-</ul>
+  </ul>
 </template>
 
 <script>
