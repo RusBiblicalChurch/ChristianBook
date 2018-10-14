@@ -29,3 +29,6 @@ yarn-debug.log*
 /storage
 
 /config/database.yml
+
+.ENVIRONMENT.swp
+.bashrc.swp
