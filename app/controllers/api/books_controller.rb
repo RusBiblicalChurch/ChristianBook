@@ -8,5 +8,10 @@ module Api
       end)
     end
 
+    def show
+      book = Book.find(params[:id])
+      render json: book
+    end
+
   end
 end
