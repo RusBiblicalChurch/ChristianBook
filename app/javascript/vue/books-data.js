@@ -1,5 +1,4 @@
 import axios from 'axios'
-import _ from 'lodash'
 
 function getAll () {
   return new Promise((resolve, reject) => {
