@@ -9,26 +9,10 @@ function getAll () {
   })
 }
 
-// function getById (id) {
-//   return new Promise((resolve, reject) => {
-//     getAll()
-//       .then((books) => {
-//         const book = _.find(books, { id: id })
-//         if (book) {
-//           resolve(book)
-//         } else {
-//           reject(new Error(`Can't find book with ID ${id}`))
-//         }
-//       })
-//       .catch((e) => reject(e))
-//   })
-// }
-
-
 function getById (id) {
   return new Promise((resolve, reject) => {
     axios(`/api/books/${id}`)
-      .then((response) => resolve(response.book))
+      .then((response) => resolve(response.data))
       .catch((e) => reject(e))
   })
 }
