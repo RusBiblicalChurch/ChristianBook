@@ -1,5 +1,4 @@
 import axios from 'axios'
-import _ from 'lodash'
 
 function getAll () {
   return new Promise((resolve, reject) => {
@@ -11,15 +10,8 @@ function getAll () {
 
 function getById (id) {
   return new Promise((resolve, reject) => {
-    getAll()
-      .then((books) => {
-        const book = _.find(books, { id: id })
-        if (book) {
-          resolve(book)
-        } else {
-          reject(new Error(`Can't find book with ID ${id}`))
-        }
-      })
+    axios(`/api/books/${id}`)
+      .then((response) => resolve(response.data.book))
       .catch((e) => reject(e))
   })
 }
