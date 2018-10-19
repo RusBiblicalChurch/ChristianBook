@@ -11,7 +11,7 @@ function getAll () {
 function getById (id) {
   return new Promise((resolve, reject) => {
     axios(`/api/books/${id}`)
-      .then((response) => resolve(response.data))
+      .then((response) => resolve(response.data.book))
       .catch((e) => reject(e))
   })
 }
